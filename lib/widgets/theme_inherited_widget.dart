@@ -5,8 +5,8 @@ class ThemeSwitcher extends InheritedWidget {
 
   const ThemeSwitcher({
     Key key,
-    @required this.data,
-    @required Widget child,
+    this.data,
+    Widget child,
   })  : assert(child != null),
         super(key: key, child: child);
 
