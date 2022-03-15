@@ -1,3 +1,4 @@
+import 'package:carlos_dev_v1/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:carlos_dev_v1/tabs/about_tab.dart';
 import 'package:carlos_dev_v1/widgets/theme_inherited_widget.dart';
@@ -30,8 +31,20 @@ class CarlosdevV1 extends StatelessWidget {
           ? darkTheme(context)
           : lightTheme(context),
       home: Scaffold(
-        body: AboutTab(),
-      )
+        body: HomePage(),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle),
+              label: 'Profile',
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
